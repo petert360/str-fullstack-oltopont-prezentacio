@@ -1,5 +1,5 @@
-## Vizsgaremek
+# Vizsgaremek prezentáció
 
-# Junior Fullstack API képzés
+## Junior Fullstack API képzés
 
 2021.09.08.
