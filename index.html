@@ -19,16 +19,6 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<!-- 			<section data-markdown data-background-color="aquamarine">
-				<textarea data-template>
-					## Slide 1
-					A paragraph with some text and a [link](http://hakim.se).
-					---
-					## Slide 2
-					---
-					## Slide 3
-				</textarea>
-			</section> -->
 
 			<!-- Slide #1 -->
 
@@ -44,11 +34,13 @@
 
 			<section>
 				<aside class="notes">
-					Az applikáció JWT autentikációt implementálja a jsonwebtoen függőség segítségével, és email-jelszó
+					Az applikáció JWT autentikációt implementálja a JSONWEBTOKEN csomag segítségével, és email-jelszó
 					páros alapján azonosítja a belépő felhasználót.
 					A (jelenleg számmal jelzett) szerepkörök határozzák meg, hogy az adott csoportba tartozó felhasználó
 					mely fukciók elérésére jogosult.
+					*** javítani a felvételt, hogy a nem autentikált oldal hibája megjelenjen
 				</aside>
+
 				<h3 class="">LOGIN OLDAL</h3>
 				<div class="container">
 					<div class="col">
@@ -71,6 +63,7 @@
 					Az applikáció öt különböző entitást kezel, ezek név szerint a páciensek, az oltási események, a
 					vakcina a helyszín és az oltási szövődmények
 				</aside>
+
 				<div class="container">
 					<div class="col">
 						<h3 class="">ENTITÁSOK</h3>
@@ -103,6 +96,7 @@
 					A táblázat oszlopai szerint növekvő vagy csökkenő sorrendbe rendezhetők a megjelenített adatok.
 					A páciensek listája név alapján szűrhető, mely módosítja a lapozóval megjeleníthető oldalak számát.
 				</aside>
+
 				<div class="container">
 					<div class="col">
 						<h3 class="">LISTA NÉZET</h3>
@@ -129,6 +123,7 @@
 					Az űrlap validált, csak minden szükséges mező kitöltése után küldhető el.
 					Az adatbázisben meglévő elemek módosíhatók, valamint szükség esetén törölhetők.
 				</aside>
+
 				<div class="container">
 					<div class="col">
 						<h3 class="">ADATBÁZIS MÓDOSÍTÁS</h3>
@@ -147,9 +142,13 @@
 					</div>
 				</div>
 			</section>
-			<!-- Slide #6 -->
-			<section>
 
+			<!-- Slide #6 -->
+
+			<section>
+				<aside class="notes">
+					Üres dia
+				</aside>
 			</section>
 		</div>
 	</div>
@@ -159,28 +158,17 @@
 	<script src="plugin/markdown/markdown.js"></script>
 	<script src="plugin/highlight/highlight.js"></script>
 	<script>
-		// More info about initialization & config:
-		// - https://revealjs.com/initialization/
-		// - https://revealjs.com/config/
 		Reveal.initialize({
 			hash: true,
 			overview: false,
 			defaultTiming: 60,
 			transition: 'convex',
-			// Parallax background image
-			parallaxBackgroundImage: 'dist/gif/bg.png', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
 
-			// Parallax background size
-			parallaxBackgroundSize: '2180px 1200px', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+			parallaxBackgroundImage: 'dist/gif/bg.png',
+			parallaxBackgroundSize: '2180px 1200px',
+			parallaxBackgroundHorizontal: 15,
+			parallaxBackgroundVertical: 0,
 
-			// Number of pixels to move the parallax background per slide
-			// - Calculated automatically unless specified
-			// - Set to 0 to disable movement along an axis
-			parallaxBackgroundHorizontal: 10,
-			// parallaxBackgroundVertical: 50
-
-
-			// Learn about plugins: https://revealjs.com/plugins/
 			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
 		});
 	</script>
